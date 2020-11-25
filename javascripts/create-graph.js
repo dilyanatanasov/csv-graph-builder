@@ -142,32 +142,7 @@ function createGraph(data) {
 		}
 	}
 
-	c3.generate({
-		bindto: '#chart',
-	    data: {
-	        columns: [
-	        	CPUs
-	        ]
-	    },
-	    axis: {
-	        x: {
-	            type: 'category',
-	            categories: years,
-	            tick: {
-	            	multiline: false,
-                	culling: {
-                    	max: 15
-                	}
-            	}
-	        }
-	    },
-	    zoom: {
-        	enabled: true
-    	},
-	    legend: {
-	        position: 'right'
-	    }
-	});
+	generateGraph(CPUs, years);
 }
 parseData(createGraph);
 
