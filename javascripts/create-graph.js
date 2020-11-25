@@ -5,7 +5,7 @@ let months = [];
 let dataToBeFiltered = [];
 
 function parseData(createGraph) {
-	Papa.parse("../graphs-from-csv/data/test.csv", {
+	Papa.parse("../csv-graph-builder/data/test.csv", {
 		download: true,
 		complete: function(results) {
 			createGraph(results.data);
@@ -50,7 +50,7 @@ function filterData() {
 		let monthPicked = Number(b.value);
 
 		years = [];
-		CPUs = [];
+		CPUs = ["CPUs"];
 		for (let i = 0; i < dataToBeFiltered.length; i++) {
 			if (dataToBeFiltered[i][0] !== "") {
 				const date = Number(new Date(dataToBeFiltered[i][0]).getDate());
