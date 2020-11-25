@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c06384f-0b33-4eaa-9d61-407bce96abfb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascripts/create-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/create-graph.js" afterDir="false" />
-    </list>
+    <list default="true" id="9c06384f-0b33-4eaa-9d61-407bce96abfb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +29,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606319802470</updated>
-      <workItem from="1606319803552" duration="49000" />
+      <workItem from="1606319803552" duration="897000" />
     </task>
     <servers />
   </component>

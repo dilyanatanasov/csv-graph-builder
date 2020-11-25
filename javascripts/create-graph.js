@@ -128,12 +128,17 @@ function createGraph(data) {
 		monthsList.appendChild(option);
 	}
 
-	for (let i = 1; i < data.length; i++) {
-		years.push(data[i][0]);
-		if (data[i][1] === undefined) {
-			CPUs.push(null);
-		} else {
-			CPUs.push(data[i][1]);
+	for (let i = 0; i < dataToBeFiltered.length; i++) {
+		if (dataToBeFiltered[i][0] !== "") {
+			let date1 = new Date(dataToBeFiltered[i][0]);
+			let timeStamp = Math.round(new Date().getTime() / 1000);
+			let timeStampYesterday = timeStamp - (24 * 3600);
+			let is24 = date1 >= new Date(timeStampYesterday*1000).getTime();
+
+			if (is24) {
+				years.push(dataToBeFiltered[i][0]);
+				CPUs.push(dataToBeFiltered[i][1]);
+			}
 		}
 	}
 
