@@ -91,6 +91,33 @@ function filter24Hours() {
 	};
 }
 
+function filterRange() {
+	document.getElementById("range_filter").onclick = () => {
+		console.log("Clicked")
+		let s = document.getElementById("start_date");
+		let e = document.getElementById("end_date");
+		let startDate = new Date(s.value).getTime();
+		let endDate = new Date(e.value).getTime();
+		console.log(`Start Date ${startDate}`);
+		console.log(`End Date ${endDate}`);
+		years = [];
+		CPUs = ["CPUs"];
+		for (let i = 0; i < dataToBeFiltered.length; i++) {
+			if (dataToBeFiltered[i][0] !== "") {
+				let date = new Date(dataToBeFiltered[i][0]).getTime();
+				console.log(`Date ${date}`);
+				if (date >= startDate && date <= endDate) {
+					years.push(dataToBeFiltered[i][0]);
+					CPUs.push(dataToBeFiltered[i][1]);
+				}
+			}
+		}
+
+		document.getElementById("chart").innerHTML = "";
+		generateGraph(CPUs, years);
+	};
+}
+
 function createGraph(data) {
 	data.shift();
 	for (let info of data) {
@@ -149,4 +176,5 @@ parseData(createGraph);
 setTimeout(() => {
 	filterData();
 	filter24Hours();
+	filterRange();
 }, 1000);
